@@ -26,7 +26,7 @@ short_bio: >-
     
     My academic interests lie at nlp, data mining and agentic ai. I am always eager to apply theoretical principles to solve practical problems. I was very fortunate to be advised by <a href="https://yuzhimanhua.github.io/"> Prof. Yu Zhang </a> from the Texas A&M University and <a href="http://www.zhanglinfeng.tech/"> Prof. Linfeng Zhang </a> from the Shanghai Jiao Tong University.<br><br>
 
-    In my spare time, I like listening to music(RnB&classic), watching anime, and playing ACG-related games. I'm deeply interested in otaku culture. If you find similar interests with me, feel free to contact!
+    In my spare time, I like listening to music(Jazz&classic), watching anime, and playing ACG-related games. I'm deeply interested in otaku culture. If you find similar interests with me, feel free to contact!
   
 
 portrait_url: /assets/images/photos/photo2.jpg
@@ -49,16 +49,19 @@ experience:
 - name: Shanghai Jiao Tong University
   logo: /assets/images/badges/sjtu.jpg
   position: Research Intern
-  date: May 2024 - Present
+  date: May 2024 - Feb 2025
 - name: Texas A&M University
   logo: /assets/images/badges/tamu.jpg
   position: Research Intern
   date: May 2025 - Present
 
-#awards:
-#- name: Award Name 2
-#  date: 2024
+awards:
+- name: AAAI-26 Student Scholarship & Volunteer Program
+  date: 2025
 #- name: Award Name 1 
 #  date: 2021
 #- name: A quick brown fox jumps over the lazy dog and runs away award
 #  date: 2021
+
+service:
+- name: Conference Reviewer: ACL 2026
