@@ -85,8 +85,7 @@ img.lazy {
     padding: 2rem;
 }
 
-.credentials-grid,
-.service-grid {
+.credentials-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.5rem;
@@ -154,8 +153,8 @@ img.lazy {
 }
 
 .service-section {
-    margin-top: 1.75rem;
-    padding-top: 1.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     border-top: 1px solid #e8ecf0;
 }
 
@@ -164,7 +163,7 @@ img.lazy {
     align-items: baseline;
     flex-wrap: wrap;
     gap: .65rem;
-    margin-bottom: .75rem;
+    margin-bottom: 0;
 }
 
 .service-category h3 {
@@ -178,18 +177,35 @@ img.lazy {
     color: #66717e;
 }
 
+.service-section .credentials-heading {
+    margin-bottom: .75rem;
+}
+
+.service-grid {
+    display: grid;
+    gap: .6rem;
+}
+
+.service-group {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: baseline;
+}
+
 .service-venues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .15rem .55rem;
+    list-style: none;
     margin: 0;
-    padding-left: 1.1rem;
+    padding: 0;
     font-size: .9375rem;
     line-height: 1.65;
 }
 
-.service-venues li + li {
-    margin-top: .3rem;
-}
-
-.service-venues li::marker {
+.service-venues li:not(:last-child)::after {
+    content: ";";
     color: #8798aa;
 }
 
@@ -198,9 +214,19 @@ img.lazy {
         padding: 1.5rem;
     }
 
-    .credentials-grid,
-    .service-grid {
+    .credentials-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 1.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .service-group {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .2rem;
+    }
+
+    .service-grid {
+        gap: .75rem;
     }
 }
