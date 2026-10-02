@@ -29,7 +29,7 @@ short_bio: >-
     In my spare time, I like listening to music(Jazz&classic), watching anime, and playing ACG-related games. I'm deeply interested in otaku culture. If you find similar interests with me, feel free to contact!
   
 
-portrait_url: /assets/images/photos/photo2.jpg
+portrait_url: /assets/images/photos/catandme.jpg
 #portrait_caption: >-
 #  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
@@ -62,4 +62,18 @@ awards:
 #  date: 2021
 #- name: A quick brown fox jumps over the lazy dog and runs away award
 #  date: 2021
+
+service:
+- category: Conference
+  role: Reviewer
+  venues:
+  - NeurIPS 2026
+  - WWW 2026
+  - ACL Rolling Review (ARR)
+  - ICLR 2027
+- category: Journal
+  role: Reviewer
+  venues:
+  - TPAMI
+  - ACM Computing Surveys
 

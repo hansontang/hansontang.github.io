@@ -67,6 +67,17 @@
                     </div>
                     {% endif %}
 
+                    {% if site.data.profile.service %}
+                    <div class="col-md-6">
+                        <div class="mx-2 my-1">
+                            <h6>Service</h6>
+                            {% for item in site.data.profile.service %}
+                            <div class="small font-weight-bold">{{ item.category | escape }}</div>
+                            <p class="small mb-2">{{ item.role | escape }}: {{ item.venues | join: '; ' | escape }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
 
             </div>
