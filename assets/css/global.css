@@ -80,3 +80,127 @@ img.lazy {
     height: 370px !important; 
     width: auto !important;
 }
+/* Academic background and reviewer service. */
+.credentials-card {
+    padding: 2rem;
+}
+
+.credentials-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.credentials-column {
+    display: grid;
+    gap: 1.75rem;
+    align-content: start;
+}
+
+.credentials-heading {
+    margin: 0 0 1rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: #25364a;
+}
+
+.credentials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credentials-list > li + li {
+    margin-top: 1.25rem;
+}
+
+.credentials-entry {
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+}
+
+.credentials-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: .125rem;
+}
+
+.credentials-details {
+    min-width: 0;
+}
+
+.credentials-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.credentials-description {
+    margin-top: .2rem;
+    font-size: .9375rem;
+    line-height: 1.55;
+    color: #485463;
+}
+
+.credentials-date {
+    margin-top: .3rem;
+    font-size: .8125rem;
+    line-height: 1.5;
+    color: #66717e;
+}
+
+.service-section {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e8ecf0;
+}
+
+.service-category {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin-bottom: .75rem;
+}
+
+.service-category h3 {
+    margin: 0;
+    font-size: .9375rem;
+    line-height: 1.5;
+}
+
+.service-category span {
+    font-size: .8125rem;
+    color: #66717e;
+}
+
+.service-venues {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: .9375rem;
+    line-height: 1.65;
+}
+
+.service-venues li + li {
+    margin-top: .3rem;
+}
+
+.service-venues li::marker {
+    color: #8798aa;
+}
+
+@media (max-width: 767.98px) {
+    .credentials-card {
+        padding: 1.5rem;
+    }
+
+    .credentials-grid,
+    .service-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+}
