@@ -1,32 +1,35 @@
 ---
 layout: default
-title : Publications
+title: Research & Publications
 navbar_title: Publications
-body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
+<header class="page-heading">
+    <h1>Research &amp; Publications</h1>
+    <p>My work in natural language processing, data selection, and AI agents.</p>
+</header>
 
-{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign papers = site.publications | sort: "order" %}
+{% assign manuscripts = papers | where: "status", "review" %}
+{% assign published = papers | where: "status", "published" %}
 
-<div class="row">
-    <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            {% for item in year.items %}
-                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
-            {% endfor %}
-        </div>
+{% if manuscripts.size > 0 %}
+<section class="content-section" aria-labelledby="manuscripts-heading">
+    <div class="section-heading"><h2 id="manuscripts-heading">Under review</h2></div>
+    <div class="paper-list">
+        {% for item in manuscripts %}
+        {% include widgets/publication_item.html item=item %}
         {% endfor %}
     </div>
+</section>
+{% endif %}
 
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
-        </div>
+{% if published.size > 0 %}
+<section class="content-section" aria-labelledby="published-heading">
+    <div class="section-heading"><h2 id="published-heading">Publications</h2></div>
+    <div class="paper-list">
+        {% for item in published %}
+        {% include widgets/publication_item.html item=item %}
+        {% endfor %}
     </div>
-
-</div>
+</section>
+{% endif %}
