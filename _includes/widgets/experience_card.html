@@ -1,4 +1,7 @@
-<section class="background-section" aria-label="Background and service">
+<div class="row mt-3">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body credentials-card">
                 <div class="credentials-grid">
                     <div class="credentials-column">
                         {% if site.data.profile.education %}
@@ -10,8 +13,8 @@
                                     {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" class="credentials-logo">{% endif %}
                                     <div class="credentials-details">
                                         <div class="credentials-name">{{ item.name }}</div>
-                                        <div class="credentials-description">{{ item.position }}</div>
                                         {% if item.dept %}<div class="credentials-description">{{ item.dept }}</div>{% endif %}
+                                        <div class="credentials-description">{{ item.position }}</div>
                                         <div class="credentials-date">{{ item.date }}</div>
                                     </div>
                                 </li>
@@ -72,4 +75,7 @@
                     </div>
                 </section>
                 {% endif %}
-</section>
+            </div>
+        </div>
+    </div>
+</div>

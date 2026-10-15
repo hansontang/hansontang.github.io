@@ -1,10 +1,18 @@
-<nav class="site-nav" aria-label="Main navigation">
-    <div class="site-shell nav-inner">
-        <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.data.profile.navbar_name | escape }}</a>
-        <ul class="nav-links">
-            {% for item in site.data.navigation.pages %}
-            <li><a href="{{ item.url | relative_url }}" {% if item.name == page.navbar_title %}aria-current="page"{% endif %}>{{ item.name | escape }}</a></li>
-            {% endfor %}
-        </ul>
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5 shadow-sm">
+    <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
+        <a class="navbar-brand"><strong>{{site.data.profile.navbar_name}}</strong></a>
+        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-map"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% for item in site.data.navigation.pages %}
+                <li class="nav-item {% if item.name == page.navbar_title %}active{% endif %}">
+                    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </nav>

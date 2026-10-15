@@ -5,6 +5,8 @@ year: 2026
 order: 3
 selected: false
 status: review
+pub: "Under review"
+pub_date: "2026"
 topic: "Agent evaluation"
 abstract: >-
   AgentPersonaBench evaluates whether latent persona traits guide agents' observable behavior across survey, chat, web, and desktop application tasks.
