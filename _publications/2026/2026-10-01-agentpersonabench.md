@@ -8,6 +8,7 @@ status: preprint
 pub: "arXiv preprint"
 pub_date: "2026"
 topic: "Agent evaluation"
+cover: /assets/images/covers/agentpersonabench.png
 abstract: >-
   AgentPersonaBench evaluates whether latent persona traits guide agents' observable behavior across survey, chat, web, and desktop application tasks.
 authors:

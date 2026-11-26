@@ -8,6 +8,12 @@ status: review
 pub: "Under review"
 pub_date: "2026"
 topic: "Science of science"
+cover: /assets/images/covers/novelty-recognition.png
+authors:
+  - Haixiang Tang
+  - Youran Shen
+  - Hangxiao Zhu
+  - Yu Zhang
 abstract: >-
   This study examines how human-rated and language-derived forms of novelty relate to citations and public attention in NLP and machine learning.
 links: {}
